@@ -8,7 +8,6 @@
   ### *Insert a catchy 1-sentence tagline here (e.g., "Mapping asteroid trajectories with AI to safeguard humanity's future.")*
 
   [![NASA Space Apps](https://shields.io)](https://spaceappschallenge.org)
-  [![License: MIT](https://shields.io)](https://opensource.org)
   [![Built With](https://shields.io)](https://github.com)
 
   [🌐 Live Demo](#) · [🎬 Video Pitch](#) · [📄 Presentation Deck](#)
