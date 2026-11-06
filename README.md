@@ -3,7 +3,7 @@
 <p align="center">
 <img src="https://img.shields.io/badge/NASA-Space%20Apps%20Challenge-0B3D91?style=for-the-badge&logo=nasa&logoColor=white" />
 <img src="https://img.shields.io/badge/Year-2026-171717?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Domain-Space%20Science-6C63FF?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Domain-Astrophysics-6C63FF?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Status-In%20Development-orange?style=for-the-badge" />
 </p>
 
