@@ -77,7 +77,7 @@ Our project combines modern development technologies with astronomical data expl
 Technology	Application
 Frontend	[Your frontend technology]
 Backend	[Your backend technology]
-Programming Language	[Your language]
+Programming Language	[Python]
 Data Processing	[Your data processing tools]
 Visualization	[Your visualization library]
 APIs / Data Sources	NASA SPHEREx data resources
