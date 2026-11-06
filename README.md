@@ -15,72 +15,45 @@ Discovering the Universe, One Observation at a Time.
 <i>Interactive near-infrared time-series data viewer for NASA's SPHEREx mission data.</i>
 </p>
 
-✨ About the Project
+**About the Project**
 
-The universe is constantly changing. Stars move, celestial objects travel through space, and astronomical phenomena unfold across time.
+The SPHEREx Sky Viewer is an interactive web-based flip-book for visualizing near-infrared time-domain data from the NASA SPHEREx space telescope. Our visualization transforms complex multi-epoch data from astronomical surveys into quick-to-load looped images enabling citizen scientists and researchers to detect moving targets like asteroids, brown dwarfs, and variable stars missed by automated algorithms.
 
-Yet, exploring these changes within massive astronomical datasets can be challenging.
+## Understanding SPHEREx and the need for this project
+The SPHEREx space telescope launched on  March 11, 2025, on a SpaceX Falcon 9 rocket from Vandenberg Space Force Base.Its primary objective was to conduct an all-sky spectral survey in optical and near-infrared light (102 color bands) to map the cosmos. Since then it has returned images of more than a billion objects.
 
-SPHEREx — Exploring the Dynamic Universe is our attempt to bridge the gap between complex astronomical observations and accessible scientific exploration.
 
-Inspired by NASA's SPHEREx mission, our project aims to develop an interactive platform that allows users to explore astronomical sky observations, compare images captured at different times, and investigate changes in the celestial environment.
+**🎯 Problem Statement**
 
-Our goal is simple:
+* **Overwhelming Data Scale:** NASA's SPHEREx mission maps the entire sky every six months across 102 near-infrared spectral bands, collecting images of over one billion celestial objects—including brown dwarfs, asteroids, comets, and variable stars.
+* **Limitations of Automated Algorithms:** Due to the high density of data in space, many automated searching scripts will fail to detect subtle proper motions, faint objects, or overlapping/variable objects. 
+* **The Manual Inspection Bottleneck:** Although citizen science project like the Backyard World have proven that human engagement and pattern recognition is important to find rare objects but analyzing raw multi-spectral data remains too complex for everyday volunteers without specialized tools. 
 
-To turn astronomical data into an experience that anyone can explore.
-
-🚀 The Mission: Understanding SPHEREx
-
-NASA's SPHEREx (Spectro-Photometer for the History of the Universe, Epoch of Reionization and Ices Explorer) is a space telescope designed to survey the entire sky in near-infrared light.
-
-With observations across 102 spectral bands, SPHEREx provides an extraordinary view of the universe and helps scientists investigate:
-
-The origins and evolution of galaxies.
-The history of cosmic inflation.
-The distribution of galaxies throughout the universe.
-The presence of water and other essential molecules in space.
-
-Our project draws inspiration from this remarkable mission to make astronomical observations easier to visualize and investigate.
-
-🎯 Problem Statement
-
-Astronomical surveys generate enormous amounts of observational data.
-
-Identifying objects that move or change between observations requires comparing images collected at different times. This process can be difficult without accessible visualization tools.
-
-We aim to simplify astronomical exploration by creating an intuitive platform that helps users:
-
-Visualize astronomical observations.
-Compare sky images across different observation times.
-Explore changes in celestial objects.
-Investigate potential moving-object candidates.
-Understand astronomical data without requiring advanced technical expertise.
-💡 Our Solution
-
-We are developing an interactive astronomical exploration platform that transforms complex observations into meaningful visual experiences.
-
-🌠 Key Features
-Feature	Description
-🔭 Sky Explorer	Explore astronomical observations through an interactive interface.
-🕒 Time-Based Comparison	Compare observations captured at different times.
-🌌 Image Visualization	Display astronomical images in an accessible format.
-🪐 Object Exploration	Investigate celestial objects and possible moving-object candidates.
-📊 Data Insights	Present astronomical observations through understandable visualizations.
-🧭 User-Friendly Interface	Make space science accessible to students, enthusiasts, and researchers.
-
-Features will be updated as development progresses.
+**Our Challenge**
+* A public facing web-tool that loops over the images of the specific patch of sky
+* Users enter the coordinate in terms of Right Ascension and Declination
+  
+**🚀 Advanced Features & Design Considerations**
+* Modular and Scalable Data Pipeline: Ingests incoming rolling data releases from SPHEREx.
+* Multi-band and spectral analysis: Combines the 102 bands in SPHEREx using the detector arrays to improve signal to noise ratios and produce spectral information on the fly.
+* Time series image manipulation: Ability to sequence frames together, add/subtract images from different timeframes to highlight moving or variable objects.
+* Customizable field of view: Users can choose the size of their field of view to balance between wide fields for fast moving objects and optimal downloading speeds.
+* Overlay external archival data: Combine with data from other missions (e.g Gaia, WISE).
+* URL coordinates: Include co-ordinates in the URL to allow easy sharing and embedding on external websites.
+* Metadata and Quality Flags: Show essential data including contamination and pixel flags.
+*Open source: Utilises open source tools such as Astropy, Aladin/Web.
 
 🛰️ Technology & Tools
 
 Our project combines modern development technologies with astronomical data exploration.
 
 Technology	Application
-Frontend	[Your frontend technology]
-Backend	[Your backend technology]
-Programming Language	[Python]
-Data Processing	[Your data processing tools]
-Visualization	[Your visualization library]
-APIs / Data Sources	NASA SPHEREx data resources
+Frontend	HTML5 / CSS3 / JavaScript
+Backend	Python
+Programming Language	Python & JavaScript
+Data Processing	Astropy & PyVO
+Visualization	Custom Canvas / Image Flipbook Engine
+APIs / Data Sources	NASA/IPAC Infrared Science Archive (IRSA) SIA2 & AWS S3
 ⚙️ How It Works
 
 Our proposed workflow:
@@ -98,12 +71,13 @@ flowchart TD
     style F fill:#403477,color:#fff
     style G fill:#173E35,color:#fff
 
-Data Acquisition: Obtain relevant astronomical observations.
-Data Processing: Organize and prepare the observational data.
-Observation Comparison: Compare images and investigate changes across time.
-Visualization: Present observations through an interactive interface.
-Exploration: Enable users to investigate celestial objects and potential candidates.
-🖥️ Project Preview
+Data Acquisition: Query near-infrared astronomical cutouts via NASA/IPAC IRSA SIA2 endpoints and AWS S3 open data buckets using sky coordinates (RA/Dec).
+Data Processing: Parse multi-extension FITS spectral arrays using Astropy and PyVO to sequence multi-epoch survey sweeps.
+Observation Comparison: Compare 6-month survey interval frames side-by-side or in loops to identify proper motion and brightness variability.
+Visualization: Render multi-spectral observations through an interactive web-based flipbook engine with custom frame-rate controls.
+Exploration: Enable users and citizen scientists to visually inspect celestial targets, including benchmark candidates like WISE 0855 and Barnard’s Star.
+
+Project Preview
 
 <p align="center">
 <b>Explore the Universe Through Our Platform</b>
@@ -127,7 +101,7 @@ NASA/IPAC Infrared Science Archive
 
 Scientific note: Potential moving-object candidates identified through our platform are exploratory observations, not confirmed astronomical discoveries.
 
-🌍 Our Impact
+Our Impact
 
 We believe that space exploration should not be limited to scientists and research institutions.
 
@@ -141,7 +115,7 @@ Demonstrate how technology can make scientific data more accessible.
 
 Because every great discovery begins with curiosity.
 
-🔮 Future Possibilities
+Future Possibilities
 
 We envision expanding the platform with:
 
@@ -156,31 +130,34 @@ Educational features explaining astronomical discoveries.
 Four minds. One mission. Infinite curiosity.
 
 Team Member	Role	Contribution
-[Member 1]	[Role]	[Contribution]
-[Member 2]	[Role]	[Contribution]
-[Member 3]	[Role]	[Contribution]
-[Member 4]	[Role]	[Contribution]
+* **Ramsha** Integration, Presentation & Domain Lead	Project architecture, README documentation, scientific validation, and pitch presentation
+
+* **Teammate 1**	Backend Data Engineer	Python pipeline, Astropy/PyVO integration, and IRSA SIA2 API data querying
+
+* **Teammate 2**	Frontend Web Developer	Interactive UI/UX layout, coordinate search interface, and flipbook controls
+* **Teammate 3**	Data & Systems Specialist	FITS image parsing, cache optimization, and target preset validation
+
 🛠️ Getting Started
 Prerequisites
 Git
-[Required runtime]
-[Required dependencies]
+Python 3.9+
+Modern Web Browser (Chrome, Firefox, Edge, Safari)
 Installation
 bash
-git clone YOUR_REPOSITORY_URL
-cd YOUR_PROJECT_FOLDER
+git clone https://github.com/your-username/spherex-sky-viewer.git
+cd spherex-sky-viewer
 
 
 Install the dependencies:
 
 bash
-YOUR_INSTALL_COMMAND
+pip install -r requirements.txt
 
 
 Start the application:
 
 bash
-YOUR_RUN_COMMAND
+python app.py
 
 🤝 Contributing
 
