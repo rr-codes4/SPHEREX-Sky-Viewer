@@ -12,7 +12,7 @@ Discovering the Universe, One Observation at a Time.
 </h3>
 
 <p align="center">
-<i>Making astronomical observations more accessible, interactive, and meaningful through the power of SPHEREx.</i>
+<i>Interactive near-infrared time-series data viewer for NASA's SPHEREx mission data.</i>
 </p>
 
 ✨ About the Project
