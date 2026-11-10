@@ -151,21 +151,21 @@ Modern Web Browser (Chrome, Firefox, Edge, Safari)
 # Installation
     ```bash
      
-    git clone https://github.com/rr-codes4/SPHEREX-Sky-Viewer.git
-    cd SPHEREX-Sky-Viewer
+       git clone https://github.com/rr-codes4/SPHEREX-Sky-Viewer.git
+       cd SPHEREX-Sky-Viewer
 
 
 # Install the dependencies:
 
     ```bash
 
-    pip install -r requirements.txt
+       pip install -r requirements.txt
 
 
 # Start the application:
 
     ```bash
-    py app.py
+      py app.py
 
 
 # Acknowledgements
@@ -175,9 +175,7 @@ We express our gratitude to:
 NASA — For the SPHEREx mission and its contribution to astronomical research.
 NASA Space Apps Challenge — For encouraging innovation through science and technology.
 The open-source community — For providing tools and resources that support our development.
-📜 License
 
-This project is licensed under the MIT License.
 
 <p align="center">
 <img src="https://img.shields.io/badge/BUILT%20WITH-CURIOSITY-6C63FF?style=for-the-badge" />
