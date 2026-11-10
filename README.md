@@ -60,22 +60,22 @@ Our proposed workflow:
 
 mermaid
 flowchart TD
-    A["🛰️ SPHEREx Observational Data"] --> B["📥 Data Acquisition"]
-    B --> C["⚙️ Data Processing"]
-    C --> D["🔍 Observation Comparison"]
-    D --> E["📊 Visualization"]
-    E --> F["🌌 Interactive Sky Exploration"]
-    F --> G["🔭 Investigating Potential Moving Objects"]
+   * A["🛰️ SPHEREx Observational Data"] --> B["📥 Data Acquisition"]
+   * B --> C["⚙️ Data Processing"]
+   * C --> D["🔍 Observation Comparison"]
+   * D --> E["📊 Visualization"]
+   * E --> F["🌌 Interactive Sky Exploration"]
+   * F --> G["🔭 Investigating Potential Moving Objects"]
 
     style A fill:#102B55,color:#fff
     style F fill:#403477,color:#fff
     style G fill:#173E35,color:#fff
 
-Data Acquisition: Query near-infrared astronomical cutouts via NASA/IPAC IRSA SIA2 endpoints and AWS S3 open data buckets using sky coordinates (RA/Dec).
-Data Processing: Parse multi-extension FITS spectral arrays using Astropy and PyVO to sequence multi-epoch survey sweeps.
-Observation Comparison: Compare 6-month survey interval frames side-by-side or in loops to identify proper motion and brightness variability.
-Visualization: Render multi-spectral observations through an interactive web-based flipbook engine with custom frame-rate controls.
-Exploration: Enable users and citizen scientists to visually inspect celestial targets, including benchmark candidates like WISE 0855 and Barnard’s Star.
+*Data Acquisition: Query near-infrared astronomical cutouts via NASA/IPAC IRSA SIA2 endpoints and AWS S3 open data buckets using sky coordinates (RA/Dec).
+*Data Processing: Parse multi-extension FITS spectral arrays using Astropy and PyVO to sequence multi-epoch survey sweeps.
+*Observation Comparison: Compare 6-month survey interval frames side-by-side or in loops to identify proper motion and brightness variability.
+*Visualization: Render multi-spectral observations through an interactive web-based flipbook engine with custom frame-rate controls.
+*Exploration: Enable users and citizen scientists to visually inspect celestial targets, including benchmark candidates like WISE 0855 and Barnard’s Star.
 
 Project Preview
 
@@ -90,7 +90,8 @@ Dashboard	Sky Visualization
 Time Comparison	Object Exploration
 !Comparison	!Object Explorer
 Replace these image paths with screenshots from your actual application.
-🧪 Scientific Data & Resources
+
+# 🧪 Scientific Data & Resources
 
 Our project is inspired by publicly available astronomical research and NASA's scientific resources.
 
@@ -103,23 +104,23 @@ Scientific note: Potential moving-object candidates identified through our platf
 
 ## 🔬 Scientific Methodology & Validation
 
-### 1. Handling Multi-Epoch Near-Infrared Data
+ **1. Handling Multi-Epoch Near-Infrared Data**
 SPHEREx maps the entire sky every six months in 102 near-infrared bands. Our backend processes multi-extension FITS (Flexible Image Transport System) files via **Astropy** and **PyVO**, allowing researchers to isolate specific wavelength bands rich in molecular signatures ($\text{H}_2\text{O}, \text{CO}_2, \text{CO}$).
 
-### 2. Detecting Proper Motion & Parallax
+**2. Detecting Proper Motion & Parallax**
 By sequencing observations across multiple 6-month survey sweeps, our flipbook engine enables the visual detection of:
 * **High Proper Motion Objects:** Tracking angular sky displacement over time (e.g., benchmark target **Barnard’s Star**).
 * **Sub-stellar Brown Dwarfs:** Identifying faint, moving cold objects that traditional automated color-cut pipelines often overlook (e.g., benchmark target **WISE 0855**).
 * **Variable Stars:** Spotting flux/brightness changes across epochs (e.g., **RW Aurigae** and **R Draconis**).
 
-### 3. Scientific Integrity & Rigor
+**3. Scientific Integrity & Rigor**
 * **Exploratory Classification:** All moving objects or transient anomalies flagged by our interface are categorized as *candidate detections* requiring secondary spectroscopic or photometric verification.
 * **Metadata & Quality Flag Integration:** Pulls pixel-status and contamination flags directly from IRSA archives to ensure users don't mistake instrumental artifacts for real astronomical bodies.
-Our Impact
+# Our Impact
 
 We believe that space exploration should not be limited to scientists and research institutions.
 
-Our project aims to:
+# Our project aims to:
 
 Make astronomical observations easier to understand.
 Encourage curiosity about the universe.
@@ -129,61 +130,45 @@ Demonstrate how technology can make scientific data more accessible.
 
 Because every great discovery begins with curiosity.
 
-Future Possibilities
-
-We envision expanding the platform with:
-
-Advanced moving-object candidate identification.
-More sophisticated image comparison tools.
-Enhanced astronomical data filtering.
-Additional astronomical datasets.
-Improved interactive sky visualization.
-Educational features explaining astronomical discoveries.
-👨‍🚀 Meet the Team
+# 👨‍🚀 Meet the Team
 
 Four minds. One mission. Infinite curiosity.
 
 Team Member	Role	Contribution
 * **Ramsha** Integration, Presentation & Domain Lead	Project architecture, README documentation, scientific validation, and pitch presentation
 
-* **Teammate 1**	Backend Data Engineer	Python pipeline, Astropy/PyVO integration, and IRSA SIA2 API data querying
+* **Piyush Warang**	Backend Data Engineer	Python pipeline, Astropy/PyVO integration, and IRSA SIA2 API data querying
 
-* **Teammate 2**	Frontend Web Developer	Interactive UI/UX layout, coordinate search interface, and flipbook controls
-* **Teammate 3**	Data & Systems Specialist	FITS image parsing, cache optimization, and target preset validation
+* **Harsh Sahu**	Frontend Web Developer	Interactive UI/UX layout, coordinate search interface, and flipbook controls
+* **Kamalesh Krithik**	Data & Systems Specialist	FITS image parsing, cache optimization, and target preset validation
 
 🛠️ Getting Started
 Prerequisites
 Git
 Python 3.9+
 Modern Web Browser (Chrome, Firefox, Edge, Safari)
-Installation
-bash
-git clone https://github.com/your-username/spherex-sky-viewer.git
-cd spherex-sky-viewer
+
+# Installation
+    ```bash
+     
+    git clone https://github.com/rr-codes4/SPHEREX-Sky-Viewer.git
+    cd SPHEREX-Sky-Viewer
 
 
-Install the dependencies:
+# Install the dependencies:
 
-bash
-pip install -r requirements.txt
+    ```bash
+
+    pip install -r requirements.txt
 
 
-Start the application:
+# Start the application:
 
-bash
-python app.py
+    ```bash
+    py app.py
 
-🤝 Contributing
 
-We welcome ideas, suggestions, and contributions that can help improve astronomical exploration.
-
-If you would like to contribute:
-
-Fork this repository.
-Create a new branch.
-Make your changes.
-Submit a pull request.
-🙏 Acknowledgements
+# Acknowledgements
 
 We express our gratitude to:
 
