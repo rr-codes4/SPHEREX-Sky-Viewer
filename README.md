@@ -101,6 +101,20 @@ NASA/IPAC Infrared Science Archive
 
 Scientific note: Potential moving-object candidates identified through our platform are exploratory observations, not confirmed astronomical discoveries.
 
+## 🔬 Scientific Methodology & Validation
+
+### 1. Handling Multi-Epoch Near-Infrared Data
+SPHEREx maps the entire sky every six months in 102 near-infrared bands. Our backend processes multi-extension FITS (Flexible Image Transport System) files via **Astropy** and **PyVO**, allowing researchers to isolate specific wavelength bands rich in molecular signatures ($\text{H}_2\text{O}, \text{CO}_2, \text{CO}$).
+
+### 2. Detecting Proper Motion & Parallax
+By sequencing observations across multiple 6-month survey sweeps, our flipbook engine enables the visual detection of:
+* **High Proper Motion Objects:** Tracking angular sky displacement over time (e.g., benchmark target **Barnard’s Star**).
+* **Sub-stellar Brown Dwarfs:** Identifying faint, moving cold objects that traditional automated color-cut pipelines often overlook (e.g., benchmark target **WISE 0855**).
+* **Variable Stars:** Spotting flux/brightness changes across epochs (e.g., **RW Aurigae** and **R Draconis**).
+
+### 3. Scientific Integrity & Rigor
+* **Exploratory Classification:** All moving objects or transient anomalies flagged by our interface are categorized as *candidate detections* requiring secondary spectroscopic or photometric verification.
+* **Metadata & Quality Flag Integration:** Pulls pixel-status and contamination flags directly from IRSA archives to ensure users don't mistake instrumental artifacts for real astronomical bodies.
 Our Impact
 
 We believe that space exploration should not be limited to scientists and research institutions.
