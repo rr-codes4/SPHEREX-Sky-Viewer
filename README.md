@@ -131,14 +131,14 @@ Demonstrate how technology can make scientific data more accessible.
 Because every great discovery begins with curiosity.
 
 # 👨‍🚀 Meet the Team
-
-* **Ramsha Rais**	Data & Systems Specialist	FITS image parsing, cache optimization, and target preset validation
   
 * **Kamalesh Krithik** Integration, Presentation & Domain Lead	Project architecture, README documentation, scientific validation, and pitch presentation
 
 * **Piyush Warang**	Backend Data Engineer	Python pipeline, Astropy/PyVO integration, and IRSA SIA2 API data querying
 
 * **Harsh Sahu**	Frontend Web Developer	Interactive UI/UX layout, coordinate search interface, and flipbook controls
+  
+* **Ramsha Rais**	Data & Systems Specialist	FITS image parsing, cache optimization, and target preset validation
 
 🛠️ Getting Started
 Prerequisites
