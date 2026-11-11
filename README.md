@@ -132,15 +132,13 @@ Because every great discovery begins with curiosity.
 
 # 👨‍🚀 Meet the Team
 
-Four minds. One mission. Infinite curiosity.
-
-Team Member	Role	Contribution
-* **Ramsha** Integration, Presentation & Domain Lead	Project architecture, README documentation, scientific validation, and pitch presentation
+* **Ramsha Rais**	Data & Systems Specialist	FITS image parsing, cache optimization, and target preset validation
+  
+* **Kamalesh Krithik** Integration, Presentation & Domain Lead	Project architecture, README documentation, scientific validation, and pitch presentation
 
 * **Piyush Warang**	Backend Data Engineer	Python pipeline, Astropy/PyVO integration, and IRSA SIA2 API data querying
 
 * **Harsh Sahu**	Frontend Web Developer	Interactive UI/UX layout, coordinate search interface, and flipbook controls
-* **Kamalesh Krithik**	Data & Systems Specialist	FITS image parsing, cache optimization, and target preset validation
 
 🛠️ Getting Started
 Prerequisites
