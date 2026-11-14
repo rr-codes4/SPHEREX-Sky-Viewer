@@ -75,7 +75,7 @@ Space data should not stay locked inside specialized labs. This project makes re
 
 ## Team
 
-- Kamalesh Krithik — Integration, Presentation & Domain Lead: Project architecture, README documentation, scientific validation, and pitch presentation.
+- Kamalesh Krithik — README documentation, scientific validation, and pitch presentation.
 - Ramsha Rais — Backend Data Engineer: Python pipeline, Astropy/PyVO integration, and IRSA SIA2 API data querying.
 - Harsh Sahu — Frontend Web Developer: UI/UX layout, coordinate search interface, and flipbook controls.
 - Piyush Warang — Data & Systems Specialist: FITS image parsing, cache optimization, and target preset validation.
