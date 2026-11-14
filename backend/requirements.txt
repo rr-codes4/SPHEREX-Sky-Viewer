@@ -1,0 +1,4 @@
+astropy
+pyvo
+requests
+pytest
